@@ -40,26 +40,20 @@ End the program.
 PROGRAM:
 
      ORG 0000H
-
     START:
     MOV P2, #00H        
     MOV TMOD, #01H      
-
     MAIN:
     MOV TH0, #0F8H      
     MOV TL0, #30H       
     SETB TR0            
-
     WAIT:
     JNB TF0, WAIT       
     CLR TR0             
     CLR TF0             
-
     CPL P2.0            
     SJMP MAIN           
-
     END
-
 OUTPUT:
 <img width="1311" height="703" alt="image" src="https://github.com/user-attachments/assets/92e962ec-cebd-426a-9609-a161ff5c9292" />
 
